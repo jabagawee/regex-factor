@@ -10,7 +10,7 @@ def factor(n):
     if not match:
         return [n]
     f = len(match.groups()[0])
-    return factor(f) + factor(f/n)
+    return factor(n/f) + factor(f)
 
 if __name__ == "__main__":
     print factor(int(sys.argv[1]))
